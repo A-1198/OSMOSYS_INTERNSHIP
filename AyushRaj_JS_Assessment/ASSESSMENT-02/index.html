@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task-Tracker App - By Ayush Raj</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Task Tracker : Your All-in-One Manager</h1>
+      </header>
+      <form id="taskForm" class="task-form">
+        <div class="form-group">
+          <label for="title">Title of Task</label>
+          <input
+            type="text"
+            id="title"
+            placeholder="Title of your Task"
+            required
+          />
+          <label for="author">Author of Task</label>
+          <input type="text" id="author" placeholder="Author" required />
+          <label for="description">Description</label>
+          <textarea
+            id="description"
+            placeholder="Description of your Task"
+            required
+          ></textarea>
+          <label for="dueDate">Due Date</label>
+          <input type="date" id="dueDate" required />
+          <label for="priority">Priority</label>
+          <select id="priority">
+            <option value="High">Level 1 : HIGH</option>
+            <option value="Medium" selected>Level 2 : MEDIUM</option>
+            <option value="Low">Level 3 : LOW</option>
+          </select>
+        </div>
+        <button type="submit" class="btn">ADD TASK</button>
+      </form>
+      <div class="controls">
+        <div class="form-group">
+          <label for="sortSelect">Sort by:</label>
+          <select id="sortSelect">
+            <option value="dueDate">dueDate</option>
+            <option value="priority">Priority</option>
+            <option value="title">Title</option>
+          </select>
+          <label for="filterStatus">Filter by Status :</label>
+          <select id="filterStatus">
+            <option value="all">All</option>
+            <option value="completed">Completed</option>
+            <option value="pending">Pending</option>
+          </select>
+        </div>
+      </div>
+      <div class="task-display">
+        <h2><u>TASKS :</u></h2>
+        <section id="taskList" class="task-list"></section>
+      </div>
+    <script src="js/app.js"></script>
+    <footer class="footer-task">
+      &copy; Copyright by Ayush Raj - All Rights reserved.
+    </footer>
+  </body>
+</html>
